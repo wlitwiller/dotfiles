@@ -15,7 +15,10 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
-  use 'nvim-lualine/lualine.nvim'
+  use {
+      "eoh-bse/minintro.nvim",
+      config = function() require("minintro").setup({ color = "#98c379" }) end
+  } use 'nvim-lualine/lualine.nvim'
   use({ "christoomey/vim-tmux-navigator"})
   use({
     "catppuccin/nvim",
